@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <!-- Avatar Image for received messages -->
+    <ImageView
+        android:id="@+id/receiveAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/receive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Time and Date for the message -->
+    <TextView
+        android:id="@+id/timeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00 PM, 01/01/2024"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/receiveAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Received message text -->
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/receive"
+        android:padding="12dp"
+        android:text="Received message"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/receiveAvatar"
+        app:layout_constraintTop_toBottomOf="@id/timeDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
